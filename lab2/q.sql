@@ -57,6 +57,8 @@ ALTER TABLE "medical_record_medication" ADD FOREIGN KEY ("medication_id") REFERE
 
 ALTER TABLE "user" ADD "insurance_number" varchar(20);
 
-ALTER TABLE "user" MODIFY "phone" varchar(20);
+ALTER TABLE "user"
+    ALTER COLUMN "phone" TYPE varchar(20);
 
-ALTER TABLE "medication" MODIFY "description" text;
+ALTER TABLE "medication"
+    ALTER COLUMN "description" TYPE text;
